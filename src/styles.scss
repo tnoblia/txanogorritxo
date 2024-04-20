@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  background-color: #FFF9F3;
+  //importé dans head de index.html
+  font-family: 'EB Garamond', serif;
+  color: #544541;
+  max-width: 60%;
+  margin-top:20px;
+  margin-bottom:10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+h1{
+  //importé dans head de index.html
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+}
+h2{
+  //importé dans head de index.html
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+}
+
+h3{
+  font-family: "Great Vibes", cursive;
+  font-size:2em;
+  font-weight: 400;
+  font-style: normal;
+  //importé dans head de index.html
+  // font-family: "Roboto Condensed", sans-serif;
+  // font-weight: 300;
+}
+h4{
+  //importé dans head de index.html
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+}
+h5{
+  //importé dans head de index.html
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+}
+h6{
+  //importé dans head de index.html
+  font-family: 'EB Garamond', serif;
+  font-size: 30px;
+  margin : 0px 0px 20px 0px;
+  font-weight: 300;
+}
+
+a{
+  font-family: 'EB Garamond', serif;
+  color:#544541;
+  text-decoration: none;
+}

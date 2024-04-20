@@ -1,0 +1,106 @@
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoTitreContainer{
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo{
+  height: 50px;
+  margin-right: 20px;
+}
+
+.buttonAndCurtain{
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+  position: relative;
+  width: 20%;
+}
+
+.nav-toggler {
+  height: 40px;
+  width: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+.line {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 2px;
+  background:  #76605b;
+  transition: transform 0.3s ease-out,
+  opacity 0.1s ease-out;
+}
+.l1 {
+  transform: translateY(-10px)
+}
+.l3 {
+  transform: translateY(10px)
+}
+.nav-toggler.active .l1 {
+  transform: translateY(0px) rotate(135deg);
+}
+.nav-toggler.active .l2 {
+  opacity: 0;
+}
+.nav-toggler.active .l3 {
+  transform: translateY(0px) rotate(-135deg);
+}
+
+nav {
+  width: 100%;
+  top: 130%; /* Positions just below the button */
+  right: 0%;
+  position: absolute;
+  justify-content: center;
+  flex-direction: column;
+  right: -100%;
+  transform: translateX(20%); /* Start off-screen to the right */
+  transition: transform 0.5s, opacity 0.5s;
+  transition-delay: 0s;
+  z-index: 1;  /* Initially hidden we dont use display :none because it would affect transition */
+  opacity: 0;
+  flex-direction: column; /* Stacks nav links vertically */
+  align-items: center; /* Aligns nav links to the center */
+
+}
+nav.active {
+  transform: translateX(-100%); /* Move into view */
+  transition: transform 0.5s, opacity 0.5s;
+  transition-delay: 0s;
+  opacity: 1;
+  margin-right: 10px;
+}
+
+// curtainContainer {
+//   display: none;
+// }
+
+// curtainContainer.active {
+//   display: flex;
+//   margin: none;
+//   padding: none ;
+// }
+
+nav .link {
+  border:3px solid #FFF9F3;
+  margin: 10px 0;
+  text-decoration: none;
+  background-color: #F7D1C3;
+  width: 100%;
+  text-align: center;
+  border-radius: 2px;
+  margin-right: 10px;
+}

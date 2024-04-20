@@ -1,0 +1,12 @@
+.contactInfoContainer {
+  display: flex; /* Use flexbox to align items on the same line */
+  align-items: center; /* Align items vertically in the center */
+}
+
+.contactImage img {
+  height: 2em; /* Set the height relative to the font size of the text */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add some space between the image and the text */
+  max-width: 2em;
+}
+

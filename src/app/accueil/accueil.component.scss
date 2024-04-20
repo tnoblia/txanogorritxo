@@ -1,0 +1,26 @@
+.imageAndButtonContainer {
+  position: relative; /* Establishes a positioning context */
+  display: inline-block; /* Or 'block', depending on your layout needs */
+}
+
+.imageAndButtonContainer img {
+  display: block; /* Prevents default bottom margin/spacing on images */
+  width: 100%; /* Makes the image responsive */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 5px;
+}
+
+.buttonDiscover {
+  position: absolute; /* Positions relative to the nearest positioned ancestor */
+  bottom: 10%; /* Aligns to the bottom */
+  left: 50%; /* Centers horizontally */
+  width: 20%;
+  align-items: center;
+  text-align: center;
+  border: 3px solid #FFF9F3;
+  border-radius: 2px;
+  transform: translateX(-50%); /* Adjusts for the element's own width */
+  /* Style your div content as needed */
+  background-color: #F7D1C3;
+  z-index: 1;
+}
