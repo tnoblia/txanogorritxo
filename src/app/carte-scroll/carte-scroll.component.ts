@@ -30,15 +30,30 @@ export class CarteScrollComponent {
       imageUrl:"assets/images/creations/croq.jpg",
       titre :  "Quiche au fromage",
       description:  "Savoureuse quiche au fromage, riche en Gruyère fondant, enveloppée d\'une croûte dorée et parfaite, pour un repas réconfortant."
+    },
+    {
+      imageUrl:"assets/images/creations/croq.jpg",
+      titre :  "Quiche au fromage",
+      description:  "Savoureuse quiche au fromage, riche en Gruyère fondant, enveloppée d\'une croûte dorée et parfaite, pour un repas réconfortant."
+    },
+    {
+      imageUrl:"assets/images/creations/croq.jpg",
+      titre :  "Quiche au fromage",
+      description:  "Savoureuse quiche au fromage, riche en Gruyère fondant, enveloppée d\'une croûte dorée et parfaite, pour un repas réconfortant."
+    },
+    {
+      imageUrl:"assets/images/creations/croq.jpg",
+      titre :  "Quiche au fromage",
+      description:  "Savoureuse quiche au fromage, riche en Gruyère fondant, enveloppée d\'une croûte dorée et parfaite, pour un repas réconfortant."
     }
 ];
 // Un appel de service pour récupérer les données des cartes doit se faire ici.
   scrollLeft() {
-    this.cardsContainer.nativeElement.scrollBy({ left: -300, behavior: 'smooth' });
+    this.cardsContainer.nativeElement.scrollBy({ left: -320, behavior: 'smooth' });
   }
 
   scrollRight() {
-  this.cardsContainer.nativeElement.scrollBy({ left: 300, behavior: 'smooth' });
+  this.cardsContainer.nativeElement.scrollBy({ left: 320, behavior: 'smooth' });
   }
 
 }

@@ -7,11 +7,21 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   isCurtainActive:boolean= false;
-  isCurtainContainerActive:boolean= false;
+  isCurtainHidden:boolean= true;
 
   toggleCurtain():void{
-    this.isCurtainActive = !this.isCurtainActive; // Toggle the boolean value
-    setTimeout(()=>this.isCurtainContainerActive = !this.isCurtainContainerActive, 1000);
+    if(this.isCurtainActive){
+      //If curtain is already active, we let the transition from active to inactive happen
+      //then we hide the curtain.
+      this.isCurtainActive = !this.isCurtainActive;
+      setTimeout(()=>this.isCurtainHidden = !this.isCurtainHidden, 250);
+    }else{
+      //If curtain is inactive, we make it visible first and after a quick time
+      //we let the transition happen
+      this.isCurtainHidden = !this.isCurtainHidden;
+      setTimeout(()=>this.isCurtainActive = !this.isCurtainActive, 50);
+
+    }
   }
 
 }

@@ -1,6 +1,6 @@
 .imageAndButtonContainer {
   position: relative; /* Establishes a positioning context */
-  display: inline-block; /* Or 'block', depending on your layout needs */
+  display: flex; /* Or 'block', depending on your layout needs */
 }
 
 .imageAndButtonContainer img {

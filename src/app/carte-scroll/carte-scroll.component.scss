@@ -1,6 +1,8 @@
 .card-scroll-and-title-container {
   position: relative;
   overflow: hidden;
+  width: 80vw; /* ensures the container fits exactly the width of the viewport */
+  overflow: hidden; /* hides anything that overflows this container */
 }
 
 .title {
@@ -21,6 +23,11 @@
   width:100%;    /* Adjust this to fit your layout */
   display: flex;
   align-items: center;
+
+  width: 100%;
+  overflow: hidden; /* additional precaution */
+  position: relative; /* for positioning arrows */
+  padding: 20px 0; /* top and bottom padding only */
 }
 
 .cards-container {
@@ -32,6 +39,13 @@
 
   flex: 0 1 auto;
   overflow-x: auto; /* Prevents horizontal overflow */
+
+  display: flex;
+  flex-wrap: nowrap; /* prevents the cards from wrapping */
+  overflow-x: auto; /* allows horizontal scroll */
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;  /* Internet Explorer and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .app-carte-recette {
@@ -88,4 +102,8 @@
   border: none;
   height: 1px;
   width: 100%;
+}
+
+.card-scroll-container::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
 }
