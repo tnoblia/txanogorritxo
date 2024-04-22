@@ -1,11 +1,11 @@
-import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-introduction',
   templateUrl: './introduction.component.html',
   styleUrls: ['./introduction.component.scss']
 })
-export class IntroductionComponent {
+export class IntroductionComponent implements AfterViewInit {
 
   houseText:String = `Bienvenue à La Tarterie de Maixan, notre cocon gourmand. Nichée au cœur de la ville, Txanogorritxo est bien plus qu'une simple tarterie. C'est un refuge où les saveurs authentiques et les souvenirs se mêlent, créant une expérience unique pour chaque visiteur. Fondée sur la passion de la pâtisserie et le désir de partager des moments de bonheur, notre maison s'engage à offrir des tartes faites maison, préparées avec amour et les meilleurs ingrédients locaux.
   Dans notre espace chaleureux, chaque détail a été pensé pour vous faire sentir chez vous. Des meubles en rotin aux touches de rose, de kaki et de beige, notre décoration reflète l'esprit artisanal et l'atmosphère accueillante de notre tarterie. Chez Txanogorritxo, nous croyons que la simplicité et l'authenticité sont les clés du cœur.
@@ -30,12 +30,14 @@ export class IntroductionComponent {
   }
 
   ngAfterViewInit(){
-    this.updateTextHeight();
+    setTimeout(() => {
+      this.updateTextHeight();
+    }, 1);
   }
 
 
   //When screen becomes wider, text height gets smaller and pics height get bigger
-  //to avoid this, we adapt text size according to pics columns height
+  //to avoid the discrepancy, we adapt text size according to pics columns height
   updateTextHeight(){
     const heightHousePics = this.housePicColumn.nativeElement.offsetHeight;
     //const heightFounderPic = this.founderPicColumn.nativeElement.offsetHeight;
