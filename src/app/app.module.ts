@@ -10,6 +10,7 @@ import { ContactInfoComponent } from './footer/contact-info/contact-info.compone
 import { AccueilComponent } from './home-page/accueil/accueil.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { IntroductionComponent } from './introduction/introduction.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     AccueilComponent,
     NavbarComponent,
     HomePageComponent,
+    IntroductionComponent,
   ],
   imports: [
     BrowserModule,
