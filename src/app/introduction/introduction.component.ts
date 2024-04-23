@@ -17,47 +17,49 @@ export class IntroductionComponent implements AfterViewInit {
   Chaque tarte est un voyage, un souvenir que nous partageons ensemble. Bienvenue dans notre petite tranche de bonheur.
   L'engagement de Maixan envers l'excellence et l'authenticité a établi Txanogorritxo comme un lieu de réconfort et de joie. Elle insiste sur l'utilisation d'ingrédients locaux de première qualité, assurant que chaque tarte raconte une histoire de qualité et de soin. « Mon objectif est simple, » explique Maixan, « créer un lieu où chaque client peut trouver un moment de bonheur et de sérénité. » Venez vivre l'expérience de Txanogorritxo, où l'art de la pâtisserie rencontre la chaleur de l'accueil, et découvrez un monde où chaque bouchée est un souvenir à chérir.`
 
-  @ViewChild("HousePicColumn") housePicColumn!:ElementRef;
-  @ViewChild("FounderPicColumn") founderPicColumn!:ElementRef;
+  @ViewChild("LastHousePic") lastHousePic!:ElementRef;
+  @ViewChild("FounderPic") founderPic!:ElementRef;
   @ViewChild("FounderText") founderTextParagraph!:ElementRef;
   @ViewChild("HouseText") houseTextParagraph!:ElementRef;
+
+  private resizeTimeout!: number; // to store the timeout ID
 
   constructor(private renderer: Renderer2) {}
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
-    this.updateTextHeight();
+    clearTimeout(this.resizeTimeout);
+    this.resizeTimeout = window.setTimeout(() => {
+    this.updateTextHeight(this.lastHousePic,this.houseTextParagraph);
+    this.updateTextHeight(this.founderPic,this.founderTextParagraph);
+  }, 200);
   }
 
   ngAfterViewInit(){
     setTimeout(() => {
-      this.updateTextHeight();
+      this.updateTextHeight(this.lastHousePic,this.houseTextParagraph);
+      this.updateTextHeight(this.founderPic,this.founderTextParagraph);
     }, 1);
   }
 
 
   //When screen becomes wider, text height gets smaller and pics height get bigger
   //to avoid the discrepancy, we adapt text size according to pics columns height
-  updateTextHeight(){
-    const heightHousePics = this.housePicColumn.nativeElement.offsetHeight;
-    //const heightFounderPic = this.founderPicColumn.nativeElement.offsetHeight;
-    let heightHouseText = this.houseTextParagraph.nativeElement.offsetHeight;
-    //const heightFounderText = this.founderTextParagraph.nativeElement.offsetHeight;
-    //const fontSizeFounderText = window.getComputedStyle(this.founderTextParagraph.nativeElement).fontSize;
-    const fontSizeHouseText = window.getComputedStyle(this.houseTextParagraph.nativeElement).fontSize;
+  updateTextHeight(lastPic:ElementRef, text:ElementRef){
+    const bottomPosLastPic = lastPic.nativeElement.getBoundingClientRect()["bottom"];
+    let bottomPosText = text.nativeElement.getBoundingClientRect()["bottom"];
+    const fontSizeText = window.getComputedStyle(text.nativeElement).fontSize;
+    let numberFontSize:number = +fontSizeText.replace("px","");
 
-    console.log(heightHouseText,heightHousePics,fontSizeHouseText);
-
-    let numberHouseFontSize:number = +fontSizeHouseText.replace("px","");
-    while(heightHouseText<=heightHousePics){
-      heightHouseText = this.houseTextParagraph.nativeElement.offsetHeight;
-      this.renderer.setStyle(this.houseTextParagraph.nativeElement, 'fontSize', numberHouseFontSize+"px");
-      numberHouseFontSize+=1;
+    while(bottomPosText<=bottomPosLastPic){
+      bottomPosText = text.nativeElement.getBoundingClientRect()["bottom"];
+      this.renderer.setStyle(text.nativeElement, 'fontSize', numberFontSize+"px");
+      numberFontSize+=1;
     }
-    while(heightHouseText>heightHousePics){
-      heightHouseText = this.houseTextParagraph.nativeElement.offsetHeight;
-      numberHouseFontSize-=1;
-      this.renderer.setStyle(this.houseTextParagraph.nativeElement, 'fontSize', numberHouseFontSize+"px");
+    while(bottomPosText>bottomPosLastPic){
+      bottomPosText = text.nativeElement.getBoundingClientRect()["bottom"];
+      numberFontSize-=1;
+      this.renderer.setStyle(text.nativeElement, 'fontSize', numberFontSize+"px");
     }
   }
 }
