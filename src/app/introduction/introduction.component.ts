@@ -53,8 +53,8 @@ export class IntroductionComponent implements AfterViewInit {
 
     while(bottomPosText<=bottomPosLastPic){
       bottomPosText = text.nativeElement.getBoundingClientRect()["bottom"];
-      this.renderer.setStyle(text.nativeElement, 'fontSize', numberFontSize+"px");
       numberFontSize+=1;
+      this.renderer.setStyle(text.nativeElement, 'fontSize', numberFontSize+"px");
     }
     while(bottomPosText>bottomPosLastPic){
       bottomPosText = text.nativeElement.getBoundingClientRect()["bottom"];
