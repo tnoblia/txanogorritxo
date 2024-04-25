@@ -3,6 +3,10 @@
   width: 100%;
 }
 
+.founder{
+  background-color: #ffffff;
+}
+
 .column{
   margin: 30px;
   width:50%;
@@ -19,9 +23,19 @@ img{
   width: 100%;
 }
 .pic{
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .picFounder{
   margin-top: 10px;
+}
+
+#founder-title{
+  margin-bottom: 0;
+}
+
+#founder-subtitle{
+  font-size: 25px;
+  margin-bottom:20px;
+  margin-top:1px;
 }
