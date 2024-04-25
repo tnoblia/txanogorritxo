@@ -1,0 +1,16 @@
+<div class="menu-container">
+  <h2>Recettes salées</h2>
+  <div class="container">
+    <app-carte-photo
+      *ngFor="let card of saltCards"
+      [card]="card"
+    ></app-carte-photo>
+  </div>
+  <h2>Douceurs sucrées</h2>
+  <div class="container">
+    <app-carte-photo
+      *ngFor="let card of sweetCards"
+      [card]="card"
+    ></app-carte-photo>
+  </div>
+</div>

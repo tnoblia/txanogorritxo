@@ -1,0 +1,16 @@
+.img-txt-container{
+  width: 100%;
+}
+
+img{
+  width: 100%;
+  border: 7px solid var(--main-color);
+  z-index: 1;
+}
+
+.texte{
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+
+}
