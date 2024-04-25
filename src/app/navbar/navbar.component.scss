@@ -60,6 +60,9 @@
 }
 
 nav {
+  //border:2px solid #F7D1C3;
+  border-radius: 8px;
+  padding:5px;
   width: 100%;
   top: 130%; /* Positions just below the button */
   right: 0%;
@@ -80,8 +83,9 @@ nav.active {
   transform: translateX(-100%); /* Move into view */
   transition: transform 0.5s, opacity 0.5s;
   transition-delay: 0s;
-  opacity: 1;
   margin-right: 10px;
+  background-color: rgba(247,209,195, 0.7);
+  opacity: 1;
 }
 
 nav.hidden {
@@ -107,4 +111,5 @@ nav .link {
   text-align: center;
   border-radius: 2px;
   margin-right: 10px;
+  opacity: 1;
 }

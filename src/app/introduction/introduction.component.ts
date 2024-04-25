@@ -39,7 +39,7 @@ export class IntroductionComponent implements AfterViewInit {
     setTimeout(() => {
       this.updateTextHeight(this.lastHousePic,this.houseTextParagraph);
       this.updateTextHeight(this.founderPic,this.founderTextParagraph);
-    }, 1);
+    }, 200);
   }
 
 
@@ -50,16 +50,18 @@ export class IntroductionComponent implements AfterViewInit {
     let bottomPosText = text.nativeElement.getBoundingClientRect()["bottom"];
     const fontSizeText = window.getComputedStyle(text.nativeElement).fontSize;
     let numberFontSize:number = +fontSizeText.replace("px","");
-
+    console.log("update text for : "+text)
     while(bottomPosText<=bottomPosLastPic){
-      bottomPosText = text.nativeElement.getBoundingClientRect()["bottom"];
+      console.log(`The bottom of text : ${bottomPosText} is <= to the bottom of picture : ${bottomPosLastPic} so we grow it`)
       numberFontSize+=1;
       this.renderer.setStyle(text.nativeElement, 'fontSize', numberFontSize+"px");
+      bottomPosText = text.nativeElement.getBoundingClientRect()["bottom"];
     }
     while(bottomPosText>bottomPosLastPic){
-      bottomPosText = text.nativeElement.getBoundingClientRect()["bottom"];
+      console.log(`The bottom of text : ${bottomPosText} is > to the bottom of picture : ${bottomPosLastPic} so we diminish it`)
       numberFontSize-=1;
       this.renderer.setStyle(text.nativeElement, 'fontSize', numberFontSize+"px");
+      bottomPosText = text.nativeElement.getBoundingClientRect()["bottom"];
     }
   }
 }
