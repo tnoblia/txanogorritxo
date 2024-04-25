@@ -10,7 +10,7 @@
 }
 
 .divider {
-  background-color: #76605b;
+  background-color: var(--font-color);
   border: none; /* Removes the default border */
   height: 1px; /* Sets the height of the line */
   margin: 0px 0; /* Adds space above and below the line */
@@ -55,7 +55,7 @@
   border-radius: 100%;
   width: 60px ;/*width for better control */
   height: 60px;
-  background-color: #FFF9F3;
+  background-color: var(--neutral-color);
   top: 50%;
   background-color: none;
   border: none;
@@ -97,7 +97,7 @@
 }
 
 .label hr{
-  background-color: #76605b;
+  background-color: var(--font-color);
   border: none;
   height: 1px;
   width: 100%;

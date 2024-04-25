@@ -1,13 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+  --main-color: #F7D1C3;
+  --neutral-color: #FFF9F3;
+  --font-color: #544541;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body{
-  background-color: #FFF9F3;
+  background-color: var(--neutral-color);
   //importé dans head de index.html
   font-family: 'EB Garamond', serif;
-  color: #544541;
+  color: var(--font-color);
   max-width: 70%;
   margin-top:20px;
   margin-bottom:10px;
@@ -58,6 +64,6 @@ h6{
 
 a{
   font-family: 'EB Garamond', serif;
-  color:#544541;
+  color:var(--font-color);
   text-decoration: none;
 }

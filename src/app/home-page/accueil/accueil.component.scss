@@ -17,10 +17,10 @@
   width: 20%;
   align-items: center;
   text-align: center;
-  border: 3px solid #FFF9F3;
+  border: 3px solid var(--neutral-color);
   border-radius: 2px;
   transform: translateX(-50%); /* Adjusts for the element's own width */
   /* Style your div content as needed */
-  background-color: #F7D1C3;
+  background-color: var(--main-color);
   z-index: 1;
 }

@@ -39,7 +39,7 @@
   display: block;
   width: 40px;
   height: 2px;
-  background:  #76605b;
+  background:  var(--font-color);
   transition: transform 0.3s ease-out,
   opacity 0.1s ease-out;
 }
@@ -103,10 +103,10 @@ nav.hidden {
 // }
 
 nav .link {
-  border:3px solid #FFF9F3;
+  border:3px solid var(--neutral-color);
   margin: 10px 0;
   text-decoration: none;
-  background-color: #F7D1C3;
+  background-color: var(--main-color);
   width: 100%;
   text-align: center;
   border-radius: 2px;
