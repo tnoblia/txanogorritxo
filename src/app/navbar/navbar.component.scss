@@ -80,6 +80,7 @@ nav {
 
 }
 nav.active {
+  z-index: 6;
   transform: translateX(-100%); /* Move into view */
   transition: transform 0.5s, opacity 0.5s;
   transition-delay: 0s;

@@ -11,6 +11,12 @@ import { AccueilComponent } from './home-page/accueil/accueil.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { IntroductionComponent } from './introduction/introduction.component';
+import { MenuComponent } from './menu/menu.component';
+import { CartePhotoComponent } from './menu/carte-photo/carte-photo.component';
+import { EvenementsComponent } from './evenements/evenements.component';
+import { ProducteursComponent } from './producteurs/producteurs.component';
+import { CarteScrollProducteursComponent } from './producteurs/carte-scroll-producteurs/carte-scroll-producteurs.component';
+import { CarteProducteurComponent } from './producteurs/carte-scroll-producteurs/carte-producteur/carte-producteur.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +29,12 @@ import { IntroductionComponent } from './introduction/introduction.component';
     NavbarComponent,
     HomePageComponent,
     IntroductionComponent,
+    MenuComponent,
+    CartePhotoComponent,
+    EvenementsComponent,
+    ProducteursComponent,
+    CarteScrollProducteursComponent,
+    CarteProducteurComponent,
   ],
   imports: [
     BrowserModule,
