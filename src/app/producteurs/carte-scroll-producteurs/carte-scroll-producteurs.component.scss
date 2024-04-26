@@ -1,0 +1,108 @@
+.card-scroll-and-title-container {
+  position: relative;
+  width: 70vw; /* ensures the container fits exactly the width of the viewport */
+  overflow: hidden; /* hides anything that overflows this container */
+}
+
+.title {
+  text-align: left;
+  padding:0px;
+}
+
+.divider {
+  background-color: var(--font-color);
+  border: none; /* Removes the default border */
+  height: 1px; /* Sets the height of the line */
+  margin: 0px 0; /* Adds space above and below the line */
+}
+
+.card-scroll-container{
+  position: relative;
+  overflow: auto;  /* Ensures that anything outside this container is not shown */
+  width:100%;    /* Adjust this to fit your layout */
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  overflow: hidden; /* additional precaution */
+  position: relative; /* for positioning arrows */
+  padding: 20px 0; /* top and bottom padding only */
+}
+
+.cards-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  margin:10px 20px 10px 20px;
+  width:100%;
+
+  flex: 0 1 auto;
+  overflow-x: auto; /* Prevents horizontal overflow */
+
+  display: flex;
+  flex-wrap: nowrap; /* prevents the cards from wrapping */
+  overflow-x: auto; /* allows horizontal scroll */
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;  /* Internet Explorer and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.app-carte-recette {
+  flex: 0 0 auto; /* Prevents cards from stretching or shrinking */
+}
+
+.arrow {
+  border-radius: 100%;
+  width: 60px ;/*width for better control */
+  height: 60px;
+  background-color: var(--neutral-color);
+  top: 50%;
+  background-color: none;
+  border: none;
+  cursor: pointer;
+
+  // border-radius: 50%;  /* Ensures the button is perfectly circular */
+  // width: 60px;
+  // height: 60px;
+  // background-color: #FFF9F3;
+  // border: none;
+  // cursor: pointer;
+  // z-index: 10; /* Ensures arrows stay above the scroll content */
+}
+
+.arrow img{
+  height: 100%;
+
+  // width: 100%; /* Ensures the image fills the button */
+  // height: auto;
+}
+
+.labelsContainer{
+  display: flex;
+  flex-direction: row; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+}
+
+.label {
+  margin:20px 20px 20px 20px;
+  display: flex; /* Enable Flexbox */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  text-align: center; /* Center text alignment for the <h2> */
+}
+
+.label img{
+  height:100px;
+}
+
+.label hr{
+  background-color: var(--font-color);
+  border: none;
+  height: 1px;
+  width: 100%;
+}
+
+.card-scroll-container::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
