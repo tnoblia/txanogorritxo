@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CardRecipe } from 'src/assets/models/card-recipe';
+import { CardProducer } from 'src/assets/models/card-producer';
 
 @Component({
   selector: 'app-carte-producteur',
@@ -8,16 +8,18 @@ import { CardRecipe } from 'src/assets/models/card-recipe';
 })
 export class CarteProducteurComponent {
    //récupère les données du cardRecipe depuis le carte-scroll
-   @Input() card:CardRecipe;
+   @Input() card:CardProducer;
 
-   cardTitle: string;
-   cardUrl: string;
-   cardDescription: string;
+   cardTitle: String;
+   cardUrl: String;
+   cardDescription: String;
+   cardLink: String;
 
    ngOnInit(){
      this.cardTitle = this.card.titre;
      this.cardUrl = this.card.imageUrl;
      this.cardDescription = this.card.description;
+     this.cardLink = this.card.link;
    }
 
 }

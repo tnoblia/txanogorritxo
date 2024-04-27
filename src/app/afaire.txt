@@ -1,0 +1,4 @@
+Cadrer les images des cartes du carte-scroll.
+Mettre en place les animations
+Revoir les H2.
+fixer les liens "découvrir" en bas à gauche des cartes producteurs

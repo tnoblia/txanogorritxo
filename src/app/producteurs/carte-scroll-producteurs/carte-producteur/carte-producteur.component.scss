@@ -1,7 +1,7 @@
 /* card.component.css */
 .card {
-  width: 300px; /* Adjust width as necessary */
-  height: 400px;
+  width: 350px;
+  height: 500px;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
@@ -39,4 +39,16 @@
 
 .card-text p{
   margin:10px;
+}
+
+.discover-link{
+  width: 100%;
+  display: flex;
+  text-align: left;
+  margin:20px;
+  font-weight:700;
+}
+
+.discover-link a {
+  border-bottom: 1px solid var(--font-color);
 }
