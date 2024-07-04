@@ -19,7 +19,7 @@ import { CarteProducteurComponent } from './producteurs/carte-scroll-producteurs
 import { EvenementsComponent } from './evenements/evenements.component';
 import { EventContainerComponent } from './evenements/event-container/event-container.component';
 import { CalendarComponent } from './evenements/calendar/calendar.component';
-
+import { FullCalendarModule } from '@fullcalendar/angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +43,7 @@ import { CalendarComponent } from './evenements/calendar/calendar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FullCalendarModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
