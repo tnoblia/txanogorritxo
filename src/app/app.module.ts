@@ -17,6 +17,8 @@ import { ProducteursComponent } from './producteurs/producteurs.component';
 import { CarteScrollProducteursComponent } from './producteurs/carte-scroll-producteurs/carte-scroll-producteurs.component';
 import { CarteProducteurComponent } from './producteurs/carte-scroll-producteurs/carte-producteur/carte-producteur.component';
 import { EvenementsComponent } from './evenements/evenements.component';
+import { EventContainerComponent } from './evenements/event-container/event-container.component';
+import { CalendarComponent } from './evenements/calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -35,10 +37,12 @@ import { EvenementsComponent } from './evenements/evenements.component';
     CarteScrollProducteursComponent,
     CarteProducteurComponent,
     EvenementsComponent,
+    EventContainerComponent,
+    CalendarComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

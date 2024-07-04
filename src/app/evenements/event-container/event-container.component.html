@@ -1,0 +1,17 @@
+<div class="wholeContainer">
+
+  <div *ngIf="indexNum%2==0" class="picContainer">
+    <img src="{{eventImageUrl}}" alt="">
+  </div>
+  <div class="descriptionContainer">
+    <div class="descriptionSubcontainer">
+      <h4 class = 'date'>{{eventDate}}</h4>
+      <h4 class = 'title'>{{eventTitle}}</h4>
+      <p class = 'description'>{{eventDescription}}</p>
+      <div class = "buttonJoin"><a href="#">RESERVEZ VOTRE PLACE!</a></div>
+    </div>
+  </div>
+  <div *ngIf="indexNum%2==1" class="picContainer">
+    <img src="{{eventImageUrl}}" alt="">
+  </div>
+</div>

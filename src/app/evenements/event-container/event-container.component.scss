@@ -1,0 +1,35 @@
+.wholeContainer{
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.picContainer{
+  max-width: 50%;
+  padding: 20px;
+  height: 100;
+}
+
+.picContainer img{
+  width: 100%;
+  border: 20px solid var(--main-color);
+}
+
+.descriptionContainer{
+  max-width: 50%;
+  width: 100%;
+  padding: 20px;
+}
+
+.descriptionSubcontainer{
+  //padding:1px;
+  border: 1px solid var(--font-color);
+  text-align: center;
+  //background-color: var(--main-color-darker);
+  width: 100%;
+  height: 100%;
+}
+
+h4{
+  text-align: center;
+  justify-content: center;
+}
