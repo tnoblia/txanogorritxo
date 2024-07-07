@@ -20,6 +20,7 @@ import { EvenementsComponent } from './evenements/evenements.component';
 import { EventContainerComponent } from './evenements/event-container/event-container.component';
 import { CalendarComponent } from './evenements/calendar/calendar.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FullCalendarModule 
+    FullCalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

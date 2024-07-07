@@ -17,7 +17,7 @@ export class EventContainerComponent {
   indexNum:number;
 
   ngOnInit(){
-    this.eventTitle = this.event.titre;
+    this.eventTitle = this.event.title;
     this.eventImageUrl = this.event.imageUrl;
     this.eventDate = this.event.date;
     this.eventDescription = this.event.description;

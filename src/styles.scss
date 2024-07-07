@@ -5,6 +5,9 @@
   --secondary-color: #96977b;
   --neutral-color: #FFF9F3;
   --font-color: #544541;
+
+  --carte-scroll-width:60vw;
+  --general-width:60%;
 }
 
 * {
@@ -16,7 +19,7 @@ body{
   //importé dans head de index.html
   font-family: 'EB Garamond', serif;
   color: var(--font-color);
-  max-width: 70%;
+  max-width: var(--general-width);
   margin-top:20px;
   margin-bottom:10px;
   margin-left: auto;
