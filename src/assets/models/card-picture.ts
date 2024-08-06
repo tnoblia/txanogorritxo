@@ -1,7 +1,7 @@
 export interface CardPicture {
-  imageUrl:String,
-  titre :String,
-  ingredients: String,
-  allergenes: String
-  type:String
+  imageUrl:string,
+  titre :string,
+  ingredients: string,
+  allergenes: string
+  type:string
 }

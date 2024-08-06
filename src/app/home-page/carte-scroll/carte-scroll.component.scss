@@ -4,18 +4,6 @@
   overflow: hidden; /* hides anything that overflows this container */
 }
 
-.title {
-  text-align: left;
-  padding:0px;
-}
-
-.divider {
-  background-color: var(--font-color);
-  border: none; /* Removes the default border */
-  height: 1px; /* Sets the height of the line */
-  margin: 0px 0; /* Adds space above and below the line */
-}
-
 .card-scroll-container{
   position: relative;
   overflow: auto;  /* Ensures that anything outside this container is not shown */
@@ -61,6 +49,7 @@
   border: none;
   cursor: pointer;
 
+
   // border-radius: 50%;  /* Ensures the button is perfectly circular */
   // width: 60px;
   // height: 60px;
@@ -68,6 +57,10 @@
   // border: none;
   // cursor: pointer;
   // z-index: 10; /* Ensures arrows stay above the scroll content */
+}
+
+.labelTitle{
+  font-size: 20px;
 }
 
 .arrow img{
@@ -93,7 +86,7 @@
 }
 
 .label img{
-  height:100px;
+  height:150px;
 }
 
 .label hr{

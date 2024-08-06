@@ -1,10 +1,8 @@
 <h2 class="title">Nos prochains événements</h2>
-  <hr class="divider" />
 <app-event-container
 *ngFor="let event of events  | slice:0:3, let i = index"
 [event]="event"
 [position]="i + 1"
 ></app-event-container>
 <h2 class="title">Calendrier des événements</h2>
-  <hr class="divider" />
 <app-calendar [events]="events"></app-calendar>
